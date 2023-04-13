@@ -1,0 +1,62 @@
+{
+  "name": "colibricomponents",
+  "version": "0.1.0",
+  "description": "Components I often use in my React projects",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-swift/ColibriComponents-Web.git"
+  },
+  "keywords": [
+    "web",
+    "react",
+    "typescript"
+  ],
+  "author": "david-swift",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/david-swift/ColibriComponents-Web/issues"
+  },
+  "homepage": "https://github.com/david-swift/ColibriComponents-Web#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.4",
+    "@primer/react": "^35.24.0",
+    "@storybook/addon-essentials": "^7.0.4",
+    "@storybook/addon-interactions": "^7.0.4",
+    "@storybook/addon-links": "^7.0.4",
+    "@storybook/blocks": "^7.0.4",
+    "@storybook/react": "^7.0.4",
+    "@storybook/react-webpack5": "^7.0.4",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "gh-pages": "^5.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hotkeys-hook": "^4.3.8",
+    "storybook": "^7.0.4",
+    "styled-components": "^5.3.9",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@primer/react": "^35.24.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
